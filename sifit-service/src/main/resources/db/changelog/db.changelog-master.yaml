@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/changes/001-initial-schema.sql
+  - include:
+      file: classpath:/db/changelog/changes/002-stats-table.sql
+  - include:
+      file: classpath:/db/changelog/changes/003-stats-table-bigger.sql

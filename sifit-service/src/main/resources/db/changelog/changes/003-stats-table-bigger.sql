@@ -1,0 +1,2 @@
+ALTER TABLE activity_stats
+ALTER COLUMN stats TYPE VARCHAR(4096);

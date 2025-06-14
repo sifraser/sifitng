@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sifit
+    username: postgres
+    password: m3l3nkur10n
+  liquibase:
+    change-log: "classpath:/db/changelog/db.changelog-master.yaml"
+#server:
+#    port: 80

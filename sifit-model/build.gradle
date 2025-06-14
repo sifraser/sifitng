@@ -1,0 +1,8 @@
+plugins {
+    id 'sifit.kotlin-conventions'
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+

@@ -1,0 +1,45 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+    id 'sifit.kotlin-conventions'
+    id 'org.springframework.boot' version '3.5.0'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.jetbrains.kotlin.plugin.spring' version '2.1.21'
+}
+
+
+java {
+    sourceCompatibility = '17'
+}
+
+dependencies {
+    implementation project(':strava-client')
+    implementation project(':sifit-model')
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.10.1'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.liquibase:liquibase-core:4.32.0'
+
+    implementation 'org.slf4j:slf4j-api'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+
+tasks.withType(KotlinCompile) {
+    kotlinOptions {
+        freeCompilerArgs += '-Xjsr305=strict'
+        jvmTarget = '17'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

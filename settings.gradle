@@ -1,0 +1,9 @@
+rootProject.name = "sifitng"
+
+includeBuild("build-conventions")
+
+include(
+        "strava-client",
+        "sifit-service",
+        "sifit-model",
+)

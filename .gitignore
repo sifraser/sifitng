@@ -1,3 +1,11 @@
 .idea
 *.iml
 node_modules/
+.DS_Store
+build/
+.gradle/
+out/
+.idea
+*.swp
+*.hprof
+.kotlin/

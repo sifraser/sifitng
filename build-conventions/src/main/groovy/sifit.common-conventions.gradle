@@ -1,0 +1,7 @@
+group = "com.sifraser"
+version = findProperty("version") ?: "0.0"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}

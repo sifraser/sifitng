@@ -1,0 +1,23 @@
+CREATE TABLE summary_activities(
+    id bigint PRIMARY KEY,
+    type VARCHAR(64) NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    distance double precision NOT NULL,
+    moving_time INT NOT NULL,
+    elapsed_time INT NOT NULL,
+    total_elevation_gain double precision NOT NULL,
+    elev_high double precision NOT NULL,
+    elev_low double precision NOT NULL,
+    start_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    start_lat double precision,
+    start_lng double precision,
+    end_lat double precision,
+    end_lng double precision,
+    average_speed double precision NOT NULL,
+    max_speed double precision NOT NULL,
+    average_watts double precision NOT NULL,
+    device_watts BOOLEAN NOT NULL,
+    average_cadence double precision,
+    average_heartrate double precision,
+    gear_id VARCHAR(64)
+);

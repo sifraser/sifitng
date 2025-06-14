@@ -1,0 +1,24 @@
+plugins {
+    id 'sifit.kotlin-conventions'
+}
+
+dependencies {
+    def jackson_version = "2.19.0"
+    def feign_version = "13.6"
+
+    // TODO -- is there a better way to intercept exception and throw client specific one?
+    api "io.github.openfeign:feign-core:$feign_version"
+    implementation "io.github.openfeign:feign-jackson:$feign_version"
+    implementation "io.github.openfeign:feign-okhttp:$feign_version"
+    implementation "io.github.openfeign:feign-slf4j:$feign_version"
+
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jackson_version"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+}
+
